@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+
+  laravel-app:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: laravel.Dockerfile
+      args:
+        - laravel_app_port=${LARAVEL_APP_PORT}
+    
+    container_name: ${PROJECT_NAME}_laravel
+    network_mode: host
+    volumes:
+      - ./laravel_project:/var/www/html:rw
+      
+    restart: always
