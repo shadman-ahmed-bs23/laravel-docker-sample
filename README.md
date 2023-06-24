@@ -10,8 +10,8 @@ For installation
 
 1. Copy ./app_envs/laravel.example.env to ./laravel_project/.env
 2. Change the credentials (DB) in ./laravel_project/.env
-3. Get inside the container: `docker exec -it {container_name} /bin/bash`
-2. RUN `docker compose build`
-3. RUN `docker compose up -d`
-4. RUN `composer install`
-4. RUN `php artisan migrate`
+3. RUN `docker compose build`
+4. RUN `docker compose up -d`
+5. Get inside the container: `docker exec -it {container_name} /bin/bash`
+6. RUN `composer install`
+7. RUN `php artisan migrate`
